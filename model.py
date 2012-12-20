@@ -12,7 +12,7 @@ First, open all csv files, prepare to extract data from files
 # Read from every csv file, build a numpy matrix, put all data in
 # the matrix and then do the modeling
 def creatTrainTest(i,XY):
-  
+	
 	f2 = open(pathfile + "gdp.csv",'r+')
 	f3 = open(pathfile + "mi.csv",'r+')
 	f4 = open(pathfile + "ur.csv",'r+')
@@ -196,7 +196,7 @@ for i in range(51):
 ####################################################
 #Comparison of results:
 #For the 7 factor model:
-print "For the 7 factor model, we predict that Obama will win:"
+print 'For the 7 factor model, we predict that Obama will win %d electoral votes, which comes from the following states:' %votes1
 for i in range(51):
 	if result_2012[i] == 1:
 		print state_name[i]
@@ -213,7 +213,7 @@ for i in range(51):
 
 fk.close()
 
-print "For the 5 factor model, we predict that Obama will win:"
+print 'For the 5 factor model, we predict that Obama will win %d electoral votes, which comes from the following states:' %votes3
 for i in range(51):
 	if result_2012_5[i] == 1:
 		print state_name[i]
